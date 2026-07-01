@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muskan Asif | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #e91e63;
+      --dark: #0f0f0f;
+      --light: #f4f4f4;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      overflow-x:hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 15, 15, 0.98);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+    .logo{
+    font-size:22px;
+    font-weight:bold;
+    color:var(--primary);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 5% 50px;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), #000;
+    }
+    .hero-content {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .hero-image {
+      flex: 1;
+      text-align: center;
+      min-width: 280px;
+    }
+    .hero-image img{
+    width:220px;
+    max-width:90%;
+}
+    .hero-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 280px;
+    }
+    .hero-text h1 {
+      font-size: 3.2rem;
+      line-height: 1.1;
+    }
+    .hero-text .profession {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      margin: 10px 8px 10px 0;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      transform: translateY(-5px);
+    }
+
+    section { padding: 80px 5%; }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: var(--primary);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .project-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: 0.4s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Mobile Menu */
+    @media (max-width:992px){
+
+.menu-toggle{
+    display:block;
+}
+
+.nav-links{
+    position:fixed;
+    top:70px;
+    left:-100%;
+    width:100%;
+    height:100vh;
+    background:#111;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    gap:25px;
+    padding-top:40px;
+    transition:0.4s;
+}
+
+.nav-links.active{
+    left:0;
+}
+
+.hero-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:2.4rem;
+}
+
+.hero-text .profession{
+    font-size:1.3rem;
+}
+
+.hero-text{
+    min-width:100%;
+}
+
+.btn{
+    display:block;
+    width:100%;
+    margin:12px auto;
+    text-align:center;
+}
+
+}
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Muskan Asif</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="1.jpg" alt="Muskan Asif">
+      </div>
+      <div class="hero-text">
+        <h1>Hi, I'm <span style="color:#e91e63;">Muskan Asif</span></h1>
+        <p class="profession">Web App Developer & CS Student</p>
+        <p>
+          Passionate Computer Science student with strong expertise in web application development. 
+          I love turning ideas into interactive and user-friendly digital experiences.
+        </p>
+        <div>
+          <a href="#projects" class="btn btn-primary">Explore My Work</a>
+          <a href="#contact" class="btn btn-primary" style="background:transparent; border:2px solid white;">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; text-align: center;">
+      I am a dedicated Computer Science student from Gujranwala, Pakistan, currently studying at GIFT University. 
+      I specialize in building modern, responsive web applications with Java and modern frontend technologies.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" style="background:#1a1a1a;">
+    <h2>Skills</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 900px; margin: 0 auto;">
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">HTML</span>
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">CSS</span>
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">JavaScript</span>
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">Java</span>
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">Python</span>
+      <span style="background:#333; padding:12px 25px; border-radius:50px;">MySQL</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Online Food Delivery & Management System</h3>
+        <p>A full-stack web application for online food ordering and restaurant management.</p>
+        <div class="tech-stack">
+          <span>Frontend</span>
+          <span>Backend</span>
+          <span>MySQL</span>
+          <span>Java</span>
+        </div>
+        <p><strong>Key Features:</strong> Order tracking, restaurant dashboard, and full documentation.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Task Scheduling & Productivity Tracker</h3>
+        <p>Intelligent task management system with web scraping and scheduling.</p>
+        <div class="tech-stack">
+          <span>Frontend</span>
+          <span>Backend</span>
+          <span>Java</span>
+          <span>Python</span>
+          <span>DSA</span>
+        </div>
+        <p><strong>Key Features:</strong> Task automation, data sync, and efficient algorithms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="background:#1a1a1a;">
+    <h2>Contact Me</h2>
+    <p style="text-align:center; font-size:1.2rem;">
+      📧 <a href="mailto:muskanasif494@gmail.com" style="color:#e91e63;">muskanasif494@gmail.com</a><br><br>
+      📍 Gujranwala, Pakistan
+    </p>
+  </section>
+
+  <footer style="text-align:center; padding:2rem; background:#000;">
+    <p>&copy; 2026 Muskan Asif. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
